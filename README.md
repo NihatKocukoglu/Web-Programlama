@@ -1,1 +1,1 @@
-bu committe bazı buglar fixlenmiştir
+bu committe bazı değişiklikler yapılmıştır.
