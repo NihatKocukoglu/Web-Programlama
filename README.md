@@ -1,1 +1,1 @@
-bu committe bazı değişiklikler yapılmıştır.
+bazı yorum satırları eklenmiştir
