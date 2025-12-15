@@ -1,2 +1,3 @@
-veri tabanı oluşturukmuş bazı sıbınnflar oluşturulmuştur
+veri tabanı oluşturukmuş bazı sınıflar oluşturulmuştur
+
 
