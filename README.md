@@ -1,1 +1,2 @@
-bazı yorum satırları eklenmiştir
+veri tabanı oluşturukmuş bazı sıbınnflar oluşturulmuştur
+
