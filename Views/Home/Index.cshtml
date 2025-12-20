@@ -1,8 +1,83 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Hoş Geldiniz";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model IEnumerable<FCenter.Models.Gym>
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Spor Salonları</h2>
+        <a asp-action="Create" class="btn btn-primary"><i class="fas fa-plus"></i> Yeni Salon Ekle</a>
+    </div>
+
+    <table class="table table-hover shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Salon Adı</th>
+                <th>Adres</th>
+                <th>Çalışma Saatleri</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Address</td>
+                        <td>@item.WorkingHours</td>
+                        <td>
+                            @* İşlem butonları buraya *@
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" class="text-center">Şu an gösterilecek bir salon yok.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="text-center mt-5">
+    <h1 class="display-4 fw-bold">Geleceğin Spor Salonu Deneyimi</h1>
+    <p class="lead">Yapay zeka destekli antrenman ve kolay randevu sistemi.</p>
+</div>
+
+<div class="row mt-5 g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-calendar-check fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Hızlı Randevu</h5>
+                <p class="card-text">Uzman antrenörlerimizden saniyeler içinde randevu al.</p>
+                <a href="#" class="btn btn-outline-primary">Randevu Al</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-warning">
+            <div class="card-body text-center">
+                <i class="fas fa-robot fa-3x mb-3 text-warning"></i>
+                <h5 class="card-title">AI Analiz</h5>
+                <p class="card-text">Vücut tipine uygun egzersiz planını yapay zeka hazırlasın.</p>
+                <a href="#" class="btn btn-warning text-dark fw-bold">Hemen Dene</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-dumbbell fa-3x mb-3 text-danger"></i>
+                <h5 class="card-title">Hizmetlerimiz</h5>
+                <p class="card-text">Fitness, Yoga, Pilates ve daha fazlası seni bekliyor.</p>
+                <a href="#" class="btn btn-outline-danger">Göz At</a>
+            </div>
+        </div>
+    </div>
 </div>

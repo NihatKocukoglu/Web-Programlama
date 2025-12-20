@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using FitnessCenterMVC.Models;
+using FCenter.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FitnessCenterMVC.Controllers
+namespace FCenter.Controllers
 {
     public class HomeController : Controller
     {
