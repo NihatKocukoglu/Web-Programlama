@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null; // Giriş sayfasında menü görünmesin
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giriş Yap - GymAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card shadow">
+        <h3 class="text-center mb-4">GymAI Admin Girişi</h3>
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+        <form asp-action="Login" method="post">
+            <div class="mb-3">
+                <label>Kullanıcı Adı</label>
+                <input type="text" name="username" class="form-control" placeholder="admin" required />
+            </div>
+            <div class="mb-3">
+                <label>Şifre</label>
+                <input type="password" name="password" class="form-control" placeholder="1234" required />
+            </div>
+            <button type="submit" class="btn btn-danger w-100">Giriş Yap</button>
+        </form>
+    </div>
+</body>
+</html>
